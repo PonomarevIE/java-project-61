@@ -14,3 +14,6 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=PonomarevIE_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=PonomarevIE_java-project-61)
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=PonomarevIE_java-project-61)](https://sonarcloud.io/summary/new_code?id=PonomarevIE_java-project-61)
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-dark.svg)](https://sonarcloud.io/summary/new_code?id=PonomarevIE_java-project-61)
+
+### Asciinema:
+[Brain games v1](https://asciinema.org/a/JJoSvPzjx9CbUB46)
