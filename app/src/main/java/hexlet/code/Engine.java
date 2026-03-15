@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine {
+public final class Engine {
     public static final int GAME_ROUNDS_QTY = 3; // кол-во раундов в игре
     public static final int DATA_QUEST_IND = 0; // индекс вопроса в массиве данных раунда
     public static final int DATA_ANSW_IND = 1; // индекс ответа в массиве данных раунда
