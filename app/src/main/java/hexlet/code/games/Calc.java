@@ -1,18 +1,22 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
+import java.security.SecureRandom;
 
-public class Calc {
+public final class Calc {
     // Игра: "Калькулятор"
     private static final int MAX_NUMBER = 10;
     private static final int OPERATIONS_QTY = 3;
     private static final String[] OPERATIONS = {"+", "-", "*"};
+    private static SecureRandom rand = new SecureRandom();
+
+    private Calc() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
 
     public static void run() {
         String gameIntroduction = "What is the result of the expression?";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
-        Random rand = new Random();
 
         // формирование вопросов и ответов
         for (int roundNumber = 0; roundNumber < Engine.GAME_ROUNDS_QTY; roundNumber++) {

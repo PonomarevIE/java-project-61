@@ -1,19 +1,22 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
+import java.security.SecureRandom;
 
-public class Progression {
+public final class Progression {
     // Игра: "Арифметическая прогрессия"
     private static final int PROGRESSION_LENGTH = 10;
     private static final int PROGRESSION_MAX_START_NUMBER = 30;
     private static final int PROGRESSION_MAX_STEP = 10;
+    private static SecureRandom rand = new SecureRandom();
+
+    private Progression() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+    }
 
     public static void run() {
         String gameIntroduction = "What number is missing in the progression?";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
-
-        Random rand = new Random();
 
         // формирование вопросов и ответов
         for (int roundNumber = 0; roundNumber < Engine.GAME_ROUNDS_QTY; roundNumber++) {
@@ -32,7 +35,6 @@ public class Progression {
 
     private static String[] makeProgression() {
         // метод формирует массив, содержащий арифметическую прогрессию
-        Random rand = new Random();
         var progression = new String[PROGRESSION_LENGTH];
 
         int step = rand.nextInt(PROGRESSION_MAX_STEP); // приращение
