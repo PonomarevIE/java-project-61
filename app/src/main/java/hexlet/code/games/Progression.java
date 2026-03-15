@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class Progression {
     // Игра: "Арифметическая прогрессия"
-    private static final int MAX_NUMBER = 100;
     private static final int PROGRESSION_LENGTH = 10;
     private static final int PROGRESSION_MAX_START_NUMBER = 30;
     private static final int PROGRESSION_MAX_STEP = 10;
@@ -19,9 +18,6 @@ public class Progression {
 
         // формирование вопросов и ответов
         for (int roundNumber = 0; roundNumber < Engine.GAME_ROUNDS_QTY; roundNumber++) {
-            int firstNumber = rand.nextInt(MAX_NUMBER);
-            int secondNumber = rand.nextInt(MAX_NUMBER);
-
             String[] progression = makeProgression();
 
             int hiddenPosition = rand.nextInt(PROGRESSION_LENGTH);

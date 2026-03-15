@@ -4,12 +4,12 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
-    private static String userName;
     public static void main(String[] args) {
         // формирование меню
         System.out.println("Please enter the game number and press Enter.");
@@ -18,6 +18,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -30,7 +31,6 @@ public class App {
         }
         System.out.println();
 
-        boolean userWin;
         // запуск выбранной игры
         switch (menuItem) {
             case "1":
@@ -47,6 +47,9 @@ public class App {
                 break;
             case "5":
                 Progression.run();
+                break;
+            case "6":
+                Prime.run();
                 break;
             default:
                 throw new InputMismatchException("Incorrect menu item: " + menuItem);
