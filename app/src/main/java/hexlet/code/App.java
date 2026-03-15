@@ -25,17 +25,15 @@ public class App {
         // выбор пункта меню
         Scanner scanner = new Scanner(System.in);
         String menuItem = scanner.nextLine();
-
-        if (menuItem.equals("0")) {
-            System.exit(0);
-        }
         System.out.println();
 
         // запуск выбранной игры
         switch (menuItem) {
+            case "0":
+                break;
             case "1":
                 greet();
-                System.exit(0);
+                break;
             case "2":
                 Even.run();
                 break;

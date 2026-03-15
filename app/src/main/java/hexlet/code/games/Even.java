@@ -10,7 +10,6 @@ public class Even {
     public static void run() {
         String gameIntroduction = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
-
         Random rand = new Random();
 
         // формирование вопросов и ответов
@@ -20,7 +19,6 @@ public class Even {
 
             gameData[roundNumber][Engine.DATA_ANSW_IND] = isEven(randomNumber) ? "yes" : "no";
         }
-
         var engine = new Engine(gameIntroduction, gameData);
 
         engine.runGame(); // запуск игры

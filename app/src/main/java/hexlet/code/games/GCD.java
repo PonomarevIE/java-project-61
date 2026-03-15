@@ -10,7 +10,6 @@ public class GCD {
     public static void run() {
         String gameIntroduction = "Find the greatest common divisor of given numbers.";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
-
         Random rand = new Random();
 
         // формирование вопросов и ответов
@@ -23,7 +22,6 @@ public class GCD {
             gameData[roundNumber][Engine.DATA_QUEST_IND] = firstNumber + " " + secondNumber;
             gameData[roundNumber][Engine.DATA_ANSW_IND] = Integer.toString(answerNumber);
         }
-
         var engine = new Engine(gameIntroduction, gameData);
 
         engine.runGame(); // запуск игры

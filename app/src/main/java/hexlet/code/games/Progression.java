@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 public class Progression {
@@ -26,7 +25,6 @@ public class Progression {
             progression[hiddenPosition] = "..";
             gameData[roundNumber][Engine.DATA_QUEST_IND] = String.join(" ", progression);
         }
-
         var engine = new Engine(gameIntroduction, gameData);
 
         engine.runGame(); // запуск игры

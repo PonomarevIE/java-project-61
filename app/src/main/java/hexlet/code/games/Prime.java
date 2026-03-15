@@ -10,7 +10,6 @@ public class Prime {
     public static void run() {
         String gameIntroduction = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
-
         Random rand = new Random();
 
         // формирование вопросов и ответов
@@ -20,7 +19,6 @@ public class Prime {
 
             gameData[roundNumber][Engine.DATA_ANSW_IND] = isPrime(randomNumber) ? "yes" : "no";
         }
-
         var engine = new Engine(gameIntroduction, gameData);
 
         engine.runGame(); // запуск игры

@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 public class Calc {
@@ -13,7 +12,6 @@ public class Calc {
     public static void run() {
         String gameIntroduction = "What is the result of the expression?";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
-
         Random rand = new Random();
 
         // формирование вопросов и ответов
@@ -27,7 +25,6 @@ public class Calc {
             gameData[roundNumber][Engine.DATA_QUEST_IND] = firstNumber + " " + operation + " " + secondNumber;
             gameData[roundNumber][Engine.DATA_ANSW_IND] = Integer.toString(answerNumber);
         }
-
         var engine = new Engine(gameIntroduction, gameData);
 
         engine.runGame(); // запуск игры
