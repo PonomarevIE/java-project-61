@@ -9,9 +9,12 @@ import hexlet.code.games.Prime;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/*
+ * The main application class. Creates a menu with a list of games. Launches the game selected by the user
+ */
 public class App {
     public static void main(String[] args) {
-        // формирование меню
+        // printing the menu
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -22,12 +25,12 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-        // выбор пункта меню
+        // selecting a menu item
         Scanner scanner = new Scanner(System.in);
         String menuItem = scanner.nextLine();
         System.out.println();
 
-        // запуск выбранной игры
+        // launching the selected game
         switch (menuItem) {
             case "0":
                 break;
@@ -56,6 +59,9 @@ public class App {
         scanner.close();
     }
 
+    /*
+     * The method requesting a username and greeting
+     */
     private static void greet() {
         var engine = new Engine();
         engine.greet();

@@ -3,20 +3,27 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import java.security.SecureRandom;
 
+/*
+ * =================================== Game "Prime" ===================================
+ * The class implements console a game.
+ * In this game, the user must correctly answer all questions, of whether a random number is prime.
+ */
 public final class Prime {
-    // Игра: "Простое ли число?"
-    private static final int MAX_NUMBER = 100;
+    private static final int MAX_NUMBER = 100; // maximal number for question
     private static SecureRandom rand = new SecureRandom();
 
     private Prime() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 
+    /*
+     * The method for starting the game
+     */
     public static void run() {
         String gameIntroduction = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] gameData = new String[Engine.GAME_ROUNDS_QTY][2];
 
-        // формирование вопросов и ответов
+        // create questions and answers
         for (int roundNumber = 0; roundNumber < Engine.GAME_ROUNDS_QTY; roundNumber++) {
             int randomNumber = rand.nextInt(MAX_NUMBER);
             gameData[roundNumber][Engine.DATA_QUEST_IND] = Integer.toString(randomNumber);
@@ -25,9 +32,12 @@ public final class Prime {
         }
         var engine = new Engine(gameIntroduction, gameData);
 
-        engine.runGame(); // запуск игры
+        engine.runGame(); // run game
     }
 
+    /*
+     * The method returns true if the parameter is a prime number, else returns false
+     */
     private static boolean isPrime(int number) {
         if (number < 2) {
             return true;
