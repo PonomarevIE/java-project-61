@@ -47,10 +47,10 @@ public final class Progression {
     private static String[] makeProgression() {
         var progression = new String[PROGRESSION_LENGTH]; // array of progression elements in text format
 
-        int step = rand.nextInt(PROGRESSION_MAX_STEP); // step of progression
+        int step = rand.nextInt(PROGRESSION_MAX_STEP) + 1; // step of progression
 
         // the first element of the progression is determined randomly
-        int start = rand.nextInt(PROGRESSION_MAX_START_NUMBER);
+        int start = rand.nextInt(PROGRESSION_MAX_START_NUMBER) + 1;
 
         // the remaining elements are calculated based on the selected step
         for (int i = 0; i < PROGRESSION_LENGTH; i++) {

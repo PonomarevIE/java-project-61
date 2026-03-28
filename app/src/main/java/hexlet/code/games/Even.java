@@ -25,7 +25,7 @@ public final class Even {
 
         // create questions and answers
         for (int roundNumber = 0; roundNumber < Engine.GAME_ROUNDS_QTY; roundNumber++) {
-            int randomNumber = rand.nextInt(MAX_NUMBER);
+            int randomNumber = rand.nextInt(MAX_NUMBER) + 1;
             gameData[roundNumber][Engine.DATA_QUEST_IND] = Integer.toString(randomNumber);
 
             gameData[roundNumber][Engine.DATA_ANSW_IND] = isEven(randomNumber) ? "yes" : "no";

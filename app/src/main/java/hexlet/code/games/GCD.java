@@ -25,8 +25,8 @@ public final class GCD {
 
         // create questions and answers
         for (int roundNumber = 0; roundNumber < Engine.GAME_ROUNDS_QTY; roundNumber++) {
-            int firstNumber = rand.nextInt(MAX_NUMBER);
-            int secondNumber = rand.nextInt(MAX_NUMBER);
+            int firstNumber = rand.nextInt(MAX_NUMBER) + 1;
+            int secondNumber = rand.nextInt(MAX_NUMBER) + 1;
 
             int answerNumber = gcd(firstNumber, secondNumber);
 
