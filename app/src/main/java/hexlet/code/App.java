@@ -63,7 +63,10 @@ public class App {
      * The method requesting a username and greeting
      */
     private static void greet() {
-        var engine = new Engine();
-        engine.greet();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        Scanner scanner = new Scanner(System.in);
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
     }
 }
